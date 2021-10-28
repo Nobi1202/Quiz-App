@@ -12,6 +12,7 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
+
 // underscore means it's private which can only use inside this class of the project
 class _MyAppState extends State<MyApp> {
   final _questions = const [
@@ -21,7 +22,8 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Black', 'score': 10},
         {'text': 'Green', 'score': 5},
         {'text': 'Red', 'score': 3},
-        {'text': 'White', 'score': 1},],
+        {'text': 'White', 'score': 1},
+      ],
     },
     {
       'questionText': 'What\'s your favorite animal?',
@@ -29,7 +31,8 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Rabbit', 'score': 10},
         {'text': 'Tiger', 'score': 5},
         {'text': 'Lion', 'score': 3},
-        {'text': 'Elephant', 'score': 1},],
+        {'text': 'Elephant', 'score': 1},
+      ],
     },
     {
       'questionText': 'Who\'s your favorite instructor?',
@@ -37,7 +40,8 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Boss Tiến', 'score': 10},
         {'text': 'Master Tuấn Anh', 'score': 5},
         {'text': 'Master Khánh Phan', 'score': 3},
-        {'text': 'Yourself', 'score': 1},],
+        {'text': 'Yourself', 'score': 1},
+      ],
     },
   ];
 
@@ -52,7 +56,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _answerQuestion(int score) {
-
     _totalScore += score;
 
     setState(() {
@@ -80,10 +83,10 @@ class _MyAppState extends State<MyApp> {
           ),
           body: _questionIndex < _questions.length
               ? Quiz(
-            answerQuestion: _answerQuestion,
-            questionIndex: _questionIndex,
-            questions: _questions,
-          )
+                  answerQuestion: _answerQuestion,
+                  questionIndex: _questionIndex,
+                  questions: _questions,
+                )
               : Result(_totalScore, _resetQuiz),
         ),
       ),

@@ -4,12 +4,12 @@ class Answers extends StatelessWidget {
   final VoidCallback selectHandler;
   final String answerText;
 
-  const Answers(this.selectHandler,
-      this.answerText, {Key? key}) : super(key: key);
+  const Answers(this.selectHandler, this.answerText, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: RaisedButton(
         textColor: Colors.white,

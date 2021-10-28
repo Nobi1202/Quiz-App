@@ -4,7 +4,8 @@ class Result extends StatelessWidget {
   final int totalScore;
   final VoidCallback resetHandler;
 
-  const Result(this.totalScore, this.resetHandler, {Key? key}) : super(key: key);
+  const Result(this.totalScore, this.resetHandler, {Key? key})
+      : super(key: key);
 
   String get resultPhrase {
     var resultText = 'You dit it!';
@@ -37,10 +38,13 @@ class Result extends StatelessWidget {
               ),
             ),
             FlatButton(
-                onPressed: resetHandler,
-                textColor: Colors.blue,
-                child: const Text("Restart Quiz",
-                style: TextStyle(fontSize: 30,color: Colors.black),))
+              onPressed: resetHandler,
+              textColor: Colors.blue,
+              child: const Text(
+                "Restart Quiz",
+                style: TextStyle(fontSize: 30, color: Colors.black),
+              ),
+            ),
           ],
         ),
       ),
